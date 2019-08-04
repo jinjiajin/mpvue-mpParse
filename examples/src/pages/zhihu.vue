@@ -1,16 +1,16 @@
 <template lang="pug">
 .container
   .raw(v-if="raw") {{article}}
-  mpParse(v-else, :content="article", ref="mpParse")
+  wxParse(v-else, :content="article", ref="wxParse")
   .turn-btn(@click="raw = !raw") 切换
 </template>
 
 <script>
-import mpParse from 'mpvue-mpParse'
+import wxParse from 'mpvue-wxparse'
 
 export default {
   components: {
-    mpParse
+    wxParse
   },
   data () {
     return {
@@ -33,12 +33,12 @@ export default {
       this.article = detail.data.body
       mpvue.stopPullDownRefresh()
       mpvue.hideLoading()
-      setTimeout(() => console.log(this.$refs.mpParse.nodes), 1000)
+      setTimeout(() => console.log(this.$refs.wxParse.nodes), 1000)
     }
   }
 }
 </script>
 
 <style>
-@import url("~mpvue-mpParse/src/mpParse.css");
+@import url("~mpvue-wxparse/src/wxParse.css");
 </style>

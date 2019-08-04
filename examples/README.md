@@ -1,6 +1,6 @@
-# mpvue-mpParse-example
+# mpvue-wxparse-example
 
-> mpvue-mpParse 示例
+> mpvue-wxParse 示例
 
 ## Build Setup
 

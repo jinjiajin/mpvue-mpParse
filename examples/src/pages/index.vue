@@ -2,17 +2,17 @@
 .container
   .raw(v-if="show === 'md'") {{readme.raw}}
   .raw(v-if="show === 'html'") {{readme.html}}
-  mpParse(v-else-if="readme.html", :content="readme.html", ref="mpParse")
+  wxParse(v-else-if="readme.html", :content="readme.html", ref="wxParse")
   .turn-btn(@click="turn") 切换
 </template>
 
 <script>
 import marked from 'marked'
-import mpParse from 'mpvue-mpParse'
+import wxParse from 'mpvue-wxparse'
 
 export default {
   components: {
-    mpParse
+    wxParse
   },
   data () {
     return {
@@ -33,12 +33,12 @@ export default {
   methods: {
     async getData () {
       mpvue.showLoading({ title: '加载中' })
-      const res = await this.$request.get('https://gitlab.com/F-loat/mpvue-mpParse/raw/master/README.md')
+      const res = await this.$request.get('https://gitlab.com/F-loat/mpvue-wxParse/raw/master/README.md')
       this.readme.raw = res.data
       this.readme.html = marked(res.data)
       mpvue.stopPullDownRefresh()
       mpvue.hideLoading()
-      console.log(this.$refs.mpParse.nodes)
+      console.log(this.$refs.wxParse.nodes)
     },
     turn () {
       const current = this.show
@@ -54,5 +54,5 @@ export default {
 </script>
 
 <style>
-@import url("~mpvue-mpParse/src/mpParse.css");
+@import url("~mpvue-wxparse/src/wxParse.css");
 </style>

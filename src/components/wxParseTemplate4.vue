@@ -35,16 +35,7 @@
 
     <!--a类型-->
     <block v-else-if="node.tag == 'a'">
-      <view @click="mpParseATap" :class="node.classStr" :data-href="node.attr.href" :style="node.styleStr">
-        <block v-for="(node, index) of node.nodes" :key="index">
-          <wx-parse-template :node="node" />
-        </block>
-      </view>
-    </block>
-
-    <!--table类型-->
-    <block v-else-if="node.tag == 'table'">
-      <view :class="node.classStr" class="table" :style="node.styleStr">
+      <view @click="wxParseATap" :class="node.classStr" :data-href="node.attr.href" :style="node.styleStr">
         <block v-for="(node, index) of node.nodes" :key="index">
           <wx-parse-template :node="node" />
         </block>
@@ -72,24 +63,24 @@
 </template>
 
 <script>
-import mpParseTemplate from './mpParseTemplate1';
-import mpParseImg from './mpParseImg';
-import mpParseVideo from './mpParseVideo';
-import mpParseAudio from './mpParseAudio';
+import wxParseTemplate from './wxParseTemplate5';
+import wxParseImg from './wxParseImg';
+import wxParseVideo from './wxParseVideo';
+import wxParseAudio from './wxParseAudio';
 
 export default {
-  name: 'mpParseTemplate0',
+  name: 'wxParseTemplate4',
   props: {
     node: {},
   },
   components: {
-    mpParseTemplate,
-    mpParseImg,
-    mpParseVideo,
-    mpParseAudio,
+    wxParseTemplate,
+    wxParseImg,
+    wxParseVideo,
+    wxParseAudio,
   },
   methods: {
-    mpParseATap(e) {
+    wxParseATap(e) {
       const { href } = e.currentTarget.dataset;
       if (!href) return;
       this.node.$host.navigate(href, e);

@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'mpParseAudio',
+  name: 'wxParseAudio',
   props: {
     node: {
       type: Object,

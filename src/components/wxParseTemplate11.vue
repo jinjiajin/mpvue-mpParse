@@ -1,20 +1,16 @@
 <template>
   <!--判断是否是标签节点-->
   <block v-if="node.node == 'element'">
+    <!--button类型-->
     <block v-if="node.tag == 'button'">
       <button type="default" size="mini">
-        <block v-for="(node, index) of node.nodes" :key="index">
-          <wx-parse-template :node="node" />
-        </block>
       </button>
     </block>
 
     <!--li类型-->
     <block v-else-if="node.tag == 'li'">
       <view :class="node.classStr" :style="node.styleStr">
-        <block v-for="(node, index) of node.nodes" :key="index">
-          <wx-parse-template :node="node" />
-        </block>
+        {{node.text}}
       </view>
     </block>
 
@@ -35,10 +31,8 @@
 
     <!--a类型-->
     <block v-else-if="node.tag == 'a'">
-      <view @click="mpParseATap" :class="node.classStr" :data-href="node.attr.href" :style="node.styleStr">
-        <block v-for="(node, index) of node.nodes" :key="index">
-          <wx-parse-template :node="node" />
-        </block>
+      <view @click="wxParseATap" :class="node.classStr" :data-href="node.attr.href" :style="node.styleStr">
+        {{node.text}}
       </view>
     </block>
 
@@ -50,12 +44,9 @@
     <!--其他标签-->
     <block v-else>
       <view :class="node.classStr" :style="node.styleStr">
-        <block v-for="(node, index) of node.nodes" :key="index">
-          <wx-parse-template :node="node" />
-        </block>
+        {{node.text}}
       </view>
     </block>
-
   </block>
 
   <!--判断是否是文本节点-->
@@ -63,24 +54,22 @@
 </template>
 
 <script>
-import mpParseTemplate from './mpParseTemplate10';
-import mpParseImg from './mpParseImg';
-import mpParseVideo from './mpParseVideo';
-import mpParseAudio from './mpParseAudio';
+import wxParseImg from './wxParseImg';
+import wxParseVideo from './wxParseVideo';
+import wxParseAudio from './wxParseAudio';
 
 export default {
-  name: 'mpParseTemplate9',
+  name: 'wxParseTemplate11',
   props: {
     node: {},
   },
   components: {
-    mpParseTemplate,
-    mpParseImg,
-    mpParseVideo,
-    mpParseAudio,
+    wxParseImg,
+    wxParseVideo,
+    wxParseAudio,
   },
   methods: {
-    mpParseATap(e) {
+    wxParseATap(e) {
       const { href } = e.currentTarget.dataset;
       if (!href) return;
       this.node.$host.navigate(href, e);

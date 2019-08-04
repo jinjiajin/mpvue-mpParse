@@ -10,7 +10,7 @@
 	"miniprogramRoot": "dist/",
 	"compileType": "miniprogram",
 	"appid": "touristappid",
-	"projectname": "mpvue-mpParse-example",
+	"projectname": "mpvue-wxparse-example",
 	"condition": {
 		"search": {
 			"current": -1,

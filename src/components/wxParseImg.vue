@@ -6,14 +6,14 @@
     :style="newStyleStr || node.styleStr"
     :data-src="node.attr.src"
     :src="node.attr.src"
-    @tap="mpParseImgTap"
-    @load="mpParseImgLoad"
+    @tap="wxParseImgTap"
+    @load="wxParseImgLoad"
     />
 </template>
 
 <script>
 export default {
-  name: 'mpParseImg',
+  name: 'wxParseImg',
   data() {
     return {
       newStyleStr: '',
@@ -29,14 +29,14 @@ export default {
     },
   },
   methods: {
-    mpParseImgTap(e) {
+    wxParseImgTap(e) {
       if (!this.preview) return;
       const { src } = e.target.dataset;
       if (!src) return;
       this.node.$host.preview(src, e);
     },
     // 图片视觉宽高计算函数区
-    mpParseImgLoad(e) {
+    wxParseImgLoad(e) {
       const { src } = e.target.dataset;
       if (!src) return;
       const { width, height } = e.mp.detail;

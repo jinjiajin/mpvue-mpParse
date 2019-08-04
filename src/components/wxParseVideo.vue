@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'mpParseVideo',
+  name: 'wxParseVideo',
   props: {
     node: {},
   },

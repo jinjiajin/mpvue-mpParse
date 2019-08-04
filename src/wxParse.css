@@ -3,13 +3,13 @@
  * organization: WeAppDev(微信小程序开发论坛)(http://weappdev.com)
  *         垂直微信小程序开发交流社区
  *
- * github地址: https://github.com/icindy/mpParse
+ * github地址: https://github.com/icindy/wxParse
  *
  * for: 微信小程序富文本解析
- * detail : http://weappdev.com/t/mpParse-alpha0-1-html-markdown/184
+ * detail : http://weappdev.com/t/wxparse-alpha0-1-html-markdown/184
  */
 
-.mpParse {
+.wxParse {
   width: 100%;
   font-family: Helvetica, sans-serif;
   font-size: 14px;
@@ -17,129 +17,129 @@
   line-height: 1.8;
 }
 
-.mpParse view {
+.wxParse view {
   word-break: hyphenate;
 }
 
-.mpParse .inline {
+.wxParse .inline {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-.mpParse .div {
+.wxParse .div {
   margin: 0;
   padding: 0;
 }
 
-.mpParse .h1 {
+.wxParse .h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-.mpParse .h2 {
+.wxParse .h2 {
   font-size: 1.5em;
   margin: 0.83em 0;
 }
-.mpParse .h3 {
+.wxParse .h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
-.mpParse .h4 {
+.wxParse .h4 {
   margin: 1.33em 0;
 }
-.mpParse .h5 {
+.wxParse .h5 {
   font-size: 0.83em;
   margin: 1.67em 0;
 }
-.mpParse .h6 {
+.wxParse .h6 {
   font-size: 0.67em;
   margin: 2.33em 0;
 }
 
-.mpParse .h1,
-.mpParse .h2,
-.mpParse .h3,
-.mpParse .h4,
-.mpParse .h5,
-.mpParse .h6,
-.mpParse .b,
-.mpParse .strong {
+.wxParse .h1,
+.wxParse .h2,
+.wxParse .h3,
+.wxParse .h4,
+.wxParse .h5,
+.wxParse .h6,
+.wxParse .b,
+.wxParse .strong {
   font-weight: bolder;
 }
 
-.mpParse .p {
+.wxParse .p {
   margin: 1em 0;
 }
 
-.mpParse .i,
-.mpParse .cite,
-.mpParse .em,
-.mpParse .var,
-.mpParse .address {
+.wxParse .i,
+.wxParse .cite,
+.wxParse .em,
+.wxParse .var,
+.wxParse .address {
   font-style: italic;
 }
 
-.mpParse .pre,
-.mpParse .tt,
-.mpParse .code,
-.mpParse .kbd,
-.mpParse .samp {
+.wxParse .pre,
+.wxParse .tt,
+.wxParse .code,
+.wxParse .kbd,
+.wxParse .samp {
   font-family: monospace;
 }
-.mpParse .pre {
+.wxParse .pre {
   overflow: auto;
   background: #f5f5f5;
   padding: 8px;
   white-space: pre;
   margin: 1em 0px;
 }
-.mpParse .code {
+.wxParse .code {
   display: inline;
   background: #f5f5f5;
 }
 
-.mpParse .big {
+.wxParse .big {
   font-size: 1.17em;
 }
 
-.mpParse .small,
-.mpParse .sub,
-.mpParse .sup {
+.wxParse .small,
+.wxParse .sub,
+.wxParse .sup {
   font-size: 0.83em;
 }
 
-.mpParse .sub {
+.wxParse .sub {
   vertical-align: sub;
 }
-.mpParse .sup {
+.wxParse .sup {
   vertical-align: super;
 }
 
-.mpParse .s,
-.mpParse .strike,
-.mpParse .del {
+.wxParse .s,
+.wxParse .strike,
+.wxParse .del {
   text-decoration: line-through;
 }
 
-.mpParse .strong,
-.mpParse .s {
+.wxParse .strong,
+.wxParse .s {
   display: inline;
 }
 
-.mpParse .a {
+.wxParse .a {
   color: deepskyblue;
 }
 
-.mpParse .video {
+.wxParse .video {
   text-align: center;
   margin: 10px 0;
 }
 
-.mpParse .video-video {
+.wxParse .video-video {
   width: 100%;
 }
 
-.mpParse .img {
+.wxParse .img {
   display: inline-block;
   width: 0;
   height: 0;
@@ -147,68 +147,68 @@
   overflow: hidden;
 }
 
-.mpParse .blockquote {
+.wxParse .blockquote {
   margin: 5px 0;
   padding: 10px 0 10px 10px;
   font-family: Courier, Calibri, "宋体";
   background: #f5f5f5;
   border-left: 3px solid #dbdbdb;
 }
-.mpParse .blockquote .p {
+.wxParse .blockquote .p {
   margin: 0;
 }
 
-.mpParse .ul, .mpParse .ol {
+.wxParse .ul, .wxParse .ol {
   display: block;
   margin: 1em 0;
   padding-left: 16px;
 }
-.mpParse .ol {
+.wxParse .ol {
   list-style-type: disc;
 }
-.mpParse .ol {
+.wxParse .ol {
   list-style-type: decimal;
 }
-.mpParse .li {
+.wxParse .li {
   display: list-item;
   align-items: baseline;
   text-align: match-parent;
 }
-.mpParse .ul .ul, .mpParse .ol .ul {
+.wxParse .ul .ul, .wxParse .ol .ul {
   list-style-type: circle;
 }
-.mpParse .ol .ol .ul, .mpParse .ol .ul .ul, .mpParse .ul .ol .ul, .mpParse .ul .ul .ul {
+.wxParse .ol .ol .ul, .wxParse .ol .ul .ul, .wxParse .ul .ol .ul, .wxParse .ul .ul .ul {
     list-style-type: square;
 }
 
-.mpParse .u {
+.wxParse .u {
   text-decoration: underline;
 }
-.mpParse .hide {
+.wxParse .hide {
   display: none;
 }
-.mpParse .del {
+.wxParse .del {
   display: inline;
 }
-.mpParse .figure {
+.wxParse .figure {
   overflow: hidden;
 }
 
-.mpParse .table {
+.wxParse .table {
   width: 100%;
 }
-.mpParse .thead, .mpParse .tfoot, .mpParse .tr {
+.wxParse .thead, .wxParse .tfoot, .wxParse .tr {
   display: flex;
   flex-direction: row;
 }
-.mpParse .tr {
+.wxParse .tr {
   width:100%;
   display: flex;
   border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
 }
-.mpParse .th,
-.mpParse .td {
+.wxParse .th,
+.wxParse .td {
   display: flex;
   width: 580px;
   overflow: auto;
@@ -216,10 +216,10 @@
   padding: 5px;
   border-left: 1px solid #e0e0e0;
 }
-.mpParse .td:last {
+.wxParse .td:last {
   border-top: 1px solid #e0e0e0;
 }
-.mpParse .th {
+.wxParse .th {
   background: #f0f0f0;
   border-top: 1px solid #e0e0e0;
 }

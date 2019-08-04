@@ -1,26 +1,26 @@
 <!--**
  * author: F-loat <chaimaoyuan@foxmail.com>
  *
- * github地址: https://github.com/F-loat/mpvue-mpParse
+ * github地址: https://github.com/F-loat/mpvue-wxParse
  *
  * for: Mpvue框架下 微信小程序富文本解析
  */-->
 
 <template>
 <!--基础元素-->
-<div class="mpParse" :class="className" v-if="!loading">
+<div class="wxParse" :class="className" v-if="!loading">
   <block v-for="node of nodes" :key="node.index">
-    <mpParseTemplate :node="node" />
+    <wxParseTemplate :node="node" />
   </block>
 </div>
 </template>
 
 <script>
 import HtmlToJson from './libs/html2json';
-import mpParseTemplate from './components/mpParseTemplate0';
+import wxParseTemplate from './components/wxParseTemplate0';
 
 export default {
-  name: 'mpParse',
+  name: 'wxParse',
   props: {
     loading: {
       type: Boolean,
@@ -69,7 +69,7 @@ export default {
     },
   },
   components: {
-    mpParseTemplate,
+    wxParseTemplate,
   },
   data() {
     return {

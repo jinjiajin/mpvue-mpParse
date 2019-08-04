@@ -2,7 +2,7 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "mpvue-mpParse 示例",
+    "navigationBarTitleText": "mpvue-wxParse 示例",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

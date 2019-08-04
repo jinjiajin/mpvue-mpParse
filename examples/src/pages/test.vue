@@ -1,16 +1,16 @@
 <template lang="pug">
 .container
   .raw(v-if="raw") {{article}}
-  mpParse(v-else, :content="article", ref="mpParse", @navigate="navigate", @preview="preview")
+  wxParse(v-else, :content="article", ref="wxParse", @navigate="navigate", @preview="preview")
   .turn-btn(@click="raw = !raw") 切换
 </template>
 
 <script>
-import mpParse from 'mpvue-mpParse'
+import wxParse from 'mpvue-wxparse'
 
 export default {
   components: {
-    mpParse
+    wxParse
   },
   data () {
     return {
@@ -40,7 +40,7 @@ export default {
     <h5>H5</h5>
     <h6>H6</h6>
     <p>
-      mpvue-mpParse 适用于 Mpvue 的微信小程序<del>图表</del>富文本解析组件
+      mpvue-wxParse 适用于 Mpvue 的微信小程序<del>图表</del>富文本解析组件
     </p>
     <strong><a href="https://qq.com">链接</a></strong>
     <br />
@@ -86,7 +86,7 @@ next i
     }
   },
   mounted () {
-    console.log(this.$refs.mpParse.nodes)
+    console.log(this.$refs.wxParse.nodes)
   },
   methods: {
     navigate (href) {
@@ -100,5 +100,5 @@ next i
 </script>
 
 <style>
-@import url("~mpvue-mpParse/src/mpParse.css");
+@import url("~mpvue-wxparse/src/wxParse.css");
 </style>
