@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "flyio": "^0.6.13",
-    "marked": "^0.6.1",
+    "marked": "^0.7.0",
     "mpvue": "^1.4.0",
     "mpvue-wxparse": "^0.6.1"
   },
